@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Town Care</title>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="LogoNew.jpeg" class="logo">
+            <div class="nav-search">
+                <input placeholder="Search Services" class="search-input"> 
+                <div class="search-icon">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            
+           <img src="user.png" class="user-pic" onclick="toggleMenu()">
+
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="user.png">
+                        <h2>User  Name</h2>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="profile.png">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="YourOrders.html" class="sub-menu-link">
+                        <img src="YourOrder.png">
+                        <p>Your Orders</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="help-support.html" class="sub-menu-link">
+                        <img src="help.png">
+                        <p>Help Center</p>
+                        <span>></span>
+                    </a>
+                    
+                    <a href="Referral-and-earn.html" class="sub-menu-link">
+                        <img src="pngegg.png">
+                        <p>Referral & Earn</p>
+                        <span>></span>
+                    </a>
+                    
+                    <a href="#" class="sub-menu-link">
+                        <img src="logout.png">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+ <script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu")
+    }
+ </script>   
+</body>    
+   
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hero {
+    height: 60px;
+    min-width: 100%;
+    background-color: #ff9900;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-search {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    width: 720px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 5px;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    color: #111;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: white;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius:4px;
+    cursor: pointer;
+}
+
+.nav-search:hover {
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.user-pic {
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px; 
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    cursor: pointer;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 460px; 
+}
+.sub-menu {
+    background: wheat;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius:4px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.user-info h2 {
+    margin-left: 7px;
+}
+
+.user-info img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: black;
+    margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+
+.sub-menu-link p {
+    width: 100%;
+}
+
+.sub-menu-link help {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+} 
+
+
+.sub-menu-link img {
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+    font-weight: 600;
+}
+
+
+</style>
+</html>
+
+
