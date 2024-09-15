@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrigerator_Repair</title>
+    <link rel="stylesheet" href="HCare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="hero-section.html">
+                <img src="/photos/logo.png-removebg-preview.png" alt="Logo">
+            </a>
+        </div>
+        <h3>Expertise At Your Doorstep!</h3>
+        <a href="confirmation.html" class="cart-icon"><span id="item-count" class="item-count">0</span>
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+    </nav>
+
+
+    <main>
+        <div class="services">
+            <h3 style="text-align: center;">Single door</h3>
+            <hr>
+            <br>
+            <div class="visit" style="display: flex; justify-content: space-between;">
+                <img src="/photos/R2.jpg" alt="Repairing">
+                <h3>Visit Fee : Just 99rs <br><br><br> <span><button class="add-button" onclick="selectProduct('Refrigerator', 'Single Door', 99)">Book</button></span> </h3>
+            </div>
+            <h4>How It Works :</h4>
+            <ul>
+                <li>
+                    <strong>Refrigerator checkup</strong> The professional visits your home to diagnose the problem.
+                    Final cost provided post-diagnosis.
+                </li>
+                <li>
+                    <strong>Adjustment of Inspection Fee:</strong> If you decide to go ahead with the repair, the
+                    inspection fee will be adjusted in the final bill.
+                </li>
+                <li>
+                    <strong>Fixed Rate Spare Parts:</strong> High-quality spare parts are procured and used for repair.
+                </li>
+                <li>
+                    <strong>Standardised Repair Process:</strong> The trained professional handles and works on the
+                    appliance with utmost care.
+                </li>
+            </ul>
+        </div>
+
+        <div class="services">
+            <h3 style="text-align: center;">Double door</h3>
+            <hr>
+            <br>
+            <div class="visit" style="display: flex; justify-content: space-between;">
+                <img src="/photos/R1.jpg" alt="Installation">
+                <h3>Visit Fee : Just 99rs <br><br><br> <button class="add-button" onclick="selectProduct('Refrigerator', 'Singe Door', 99)">Book</button></h3>
+            </div>
+        </div>
+
+        <div class="services">
+            <h3 style="text-align: center;">Side-By-Side door</h3>
+            <hr>
+            <br>
+            <div class="visit" style="display: flex; justify-content: space-between;">
+                <img src="/photos/R3.jpg" alt="Uninstallation">
+                <h3>Visit Fee : Just 249rs <br><br><br> <button class="add-button" onclick="selectProduct('Refrigerator', 'Side-By-Side Door', 99)">Book</button></h3>
+            </div>
+        </div>
+
+        <div class="services">
+            <h3 style="text-align: center;">Rate Card</h3>
+            <hr>
+            <br>
+
+            <h3>Single Door</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Single Door - Power Unit -->
+                    <tr><td rowspan="5">Single Door - Power Unit</td><td>Power Cord</td><td>₹400</td></tr>
+                    <tr><td>Power 3 Pin Plug Top</td><td>₹100</td></tr>
+                    <tr><td>Repair - Inverter PCB (Single Door)</td><td>₹2000</td></tr>
+                    <tr><td>Replace (New) - Inverter PCB (Single Door)</td><td>₹3201</td></tr>
+                    <tr><td>Repair - PCB (Single Door)</td><td>₹1201</td></tr>
+    
+                    <!-- Single Door - Cooling Issue -->
+                    <tr><td rowspan="5">Single Door - Cooling Issue</td><td>Damaged door - Repair</td><td>₹901</td></tr>
+                    <tr><td>Door / gasket Adjust</td><td>₹400</td></tr>
+                    <tr><td>Thermostat</td><td>₹700</td></tr>
+                    <tr><td>Complete door gasket with magnet (for all model)</td><td>₹1000</td></tr>
+                    <tr><td>Defrost Sensor</td><td>₹500</td></tr>
+    
+                    <!-- Single Door - Gas Charge -->
+                    <tr><td rowspan="6">Single Door - Gas Charge</td><td>Capillary</td><td>₹350</td></tr>
+                    <tr><td>Dryer (Freezer)</td><td>₹160</td></tr>
+                    <tr><td>Pin valve</td><td>₹80</td></tr>
+                    <tr><td>Condensor coil</td><td>₹850</td></tr>
+                    <tr><td>Cooling Coil with Capillary (Single Door)</td><td>₹1300</td></tr>
+                    <tr><td>Refrigerant Gas Charge (Single Door) > 100L</td><td>₹1420</td></tr>
+    
+                    <!-- Single Door - Compressor -->
+                    <tr><td rowspan="5">Single Door - Compressor</td><td>Inverter Compressor</td><td>₹6000</td></tr>
+                    <tr><td>Capacitor</td><td>₹150</td></tr>
+                    <tr><td>Relay</td><td>₹300</td></tr>
+                    <tr><td>Over Load Protector (OLP)</td><td>₹200</td></tr>
+                    <tr><td>Relay + OLP Combo</td><td>₹500</td></tr>
+                    <tr><td>Compressor (Single Door) including Relay+OLP+capacitor</td><td>₹3500</td></tr>
+    
+                    <!-- Single Door - Accessories -->
+                    <tr><td rowspan="10">Single Door - Accessories</td><td>Drain Pipe</td><td>₹100</td></tr>
+                    <tr><td>Drain tray</td><td>₹300</td></tr>
+                    <tr><td>Copper pipe insulation</td><td>₹150</td></tr>
+                    <tr><td>Door Lock</td><td>₹150</td></tr>
+                    <tr><td>Door Switch</td><td>₹100</td></tr>
+                    <tr><td>Bulb</td><td>₹60</td></tr>
+                    <tr><td>LED Light</td><td>₹250</td></tr>
+                    <tr><td>Bulb Holder</td><td>₹100</td></tr>
+                    <tr><td>Door Leg</td><td>₹50</td></tr>
+                    <tr><td>Drain cleaning</td><td>₹100</td></tr>
+                    <tr><td>Freezer door (single door) > 200 ltr</td><td>₹650</td></tr>
+                    <tr><td>Freezer door (single door) upto 200 ltr</td><td>₹350</td></tr>
+                    <tr><td>Freezer door frame</td><td>₹450</td></tr>
+    
+                    <!-- Single Door - Minor Repair -->
+                    <tr><td rowspan="10">Single Door - Minor Repair</td><td>Defrost cycle adjustment</td><td>₹0</td></tr>
+                    <tr><td>Door-gap fix</td><td>₹0</td></tr>
+                    <tr><td>Electrical contact fixing</td><td>₹0</td></tr>
+                    <tr><td>Pipe and fan blade adjustment</td><td>₹0</td></tr>
+                    <tr><td>Electrical Plug Adjustment</td><td>₹0</td></tr>
+                    <tr><td>Refrigerator levelling</td><td>₹0</td></tr>
+                    <tr><td>Refrigerator location correction</td><td>₹0</td></tr>
+                    <tr><td>Temperature setting</td><td>₹0</td></tr>
+                    <tr><td>Wire Retaping</td><td>₹0</td></tr>
+                    <tr><td>Tray/Shelf Adjustment</td><td>₹0</td></tr>
+                    <tr><td>Double Door - Power Unit</td><td>LVT</td><td>₹750</td></tr>
+                    <tr><td>₹299 (Labour)</td><td></td></tr>
+                </tbody>
+            </table>  
+
+            <br>
+            <h3> Double Door </h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Double Door - Defrost Issue -->
+                    <tr><td rowspan="9">Double Door - Defrost Issue</td><td>Coil Heater</td><td>₹1650</td></tr>
+                    <tr><td>Defrost Sensor</td><td>₹550</td></tr>
+                    <tr><td>Defrost Timer</td><td>₹850</td></tr>
+                    <tr><td>Duct and Drain Cleaning</td><td>₹300</td></tr>
+                    <tr><td>Glass Heater</td><td>₹900</td></tr>
+                    <tr><td>P Cord heater</td><td>₹1000</td></tr>
+                    <tr><td>Bimetal</td><td>₹500</td></tr>
+                    <tr><td>Thermal Fuse</td><td>₹200</td></tr>
+                    <tr><td>Thermal Fuse and Bimetal both</td><td>₹700</td></tr>
+                    <tr><td>Defrost Sensor with Thermal fuse</td><td>₹700</td></tr>
+                    <tr><td>Rod Heater</td><td>₹1000</td></tr>
+    
+                    <!-- Double Door - Gas Charge -->
+                    <tr><td rowspan="7">Double Door - Gas Charge</td><td>Capillary</td><td>₹350</td></tr>
+                    <tr><td>Condensor coil</td><td>₹1200</td></tr>
+                    <tr><td>Cooling Coil (Double Door)</td><td>₹2500</td></tr>
+                    <tr><td>Drain Tray Condensor</td><td>₹500</td></tr>
+                    <tr><td>Dryer (Freezer)</td><td>₹160</td></tr>
+                    <tr><td>Pin valve</td><td>₹80</td></tr>
+                    <tr><td>Refrigerant Gas Charge (Double Door)</td><td>₹1890</td></tr>
+                    <tr><td>Step Valve</td><td>₹1200</td></tr>
+    
+                    <!-- Double Door - Compressor Unit -->
+                    <tr><td rowspan="5">Double Door - Compressor Unit</td><td>Capacitor</td><td>₹150</td></tr>
+                    <tr><td>Compressor including Relay, OLP, Capacitor <500 lit.</td><td>₹5400</td></tr>
+                    <tr><td>Compressor (Double Door) including Relay, OLP and Capacitor >500 liter</td><td>₹5830</td></tr>
+                    <tr><td>Inverter Compressor</td><td>₹7500</td></tr>
+                    <tr><td>Over Load Protector (OLP)</td><td>₹300</td></tr>
+                    <tr><td>Relay</td><td>₹350</td></tr>
+                    <tr><td>Relay + OLP + Capacitor</td><td>₹800</td></tr>
+    
+                    <!-- Double Door - Cooling Issue -->
+                    <tr><td rowspan="11">Double Door - Cooling Issue</td><td>DC Fan Motor - Condenser</td><td>₹1900</td></tr>
+                    <tr><td>AC Fan Motor</td><td>₹1200</td></tr>
+                    <tr><td>Damaged door - Repair</td><td>₹901</td></tr>
+                    <tr><td>Damper Thermostat</td><td>₹1050</td></tr>
+                    <tr><td>DC Fan Motor - Freezer</td><td>₹1800</td></tr>
+                    <tr><td>DC Fan Motor - Refrigerator</td><td>₹1900</td></tr>
+                    <tr><td>Defrost Sensor</td><td>₹500</td></tr>
+                    <tr><td>Hitachi door repair 440 ltr.</td><td>₹1300</td></tr>
+                    <tr><td>Fan blade</td><td>₹120</td></tr>
+                    <tr><td>Ref door gasket & magnet above 400Ltrs</td><td>₹2200</td></tr>
+                    <tr><td>Ref door gasket & magnet below 400Ltrs</td><td>₹1700</td></tr>
+                    <tr><td>Room Sensor</td><td>₹550</td></tr>
+                    <tr><td>Rotary Switch</td><td>₹600</td></tr>
+                    <tr><td>Thermocol duct repair</td><td>₹500</td></tr>
+                    <tr><td>Thermostat</td><td>₹800</td></tr>
+    
+                    <!-- Double Door - Accessories -->
+                    <tr><td rowspan="10">Double Door - Accessories</td><td>Bulb</td><td>₹50</td></tr>
+                    <tr><td>Bulb Holder</td><td>₹150</td></tr>
+                    <tr><td>Copper pipe insulation</td><td>₹170</td></tr>
+                    <tr><td>Door Lock</td><td>₹435</td></tr>
+                    <tr><td>Door Switch</td><td>₹290</td></tr>
+                    <tr><td>Drain Pipe</td><td>₹100</td></tr>
+                    <tr><td>Drain tray</td><td>₹300</td></tr>
+                    <tr><td>LED Light</td><td>₹290</td></tr>
+                    <tr><td>Magnetic door switch</td><td>₹200</td></tr>
+                    <tr><td>Thermostat knob</td><td>₹50</td></tr>
+                    <tr><td>Door Leg</td><td>₹50</td></tr>
+                </tbody>
+            </table>
+
+            <br>
+            <h3>Side-By-Side Door</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                    <!-- Side-by-Side Door - Power Unit -->
+                    <tr><td rowspan="5">Side-by-Side Door - Power Unit</td><td>LVT</td><td>₹750</td></tr>
+                    <tr><td>Power 3 Pin Plug Top</td><td>₹120</td></tr>
+                    <tr><td>Power Cord</td><td>₹350</td></tr>
+                    <tr><td>Repair - Inverter PCB (SBS)</td><td>₹2600</td></tr>
+                    <tr><td>Repair - PCB (SBS)</td><td>₹2200</td></tr>
+                    <tr><td>Replace (New) - PCB (SBS)</td><td>₹1</td></tr>
+                    <tr><td>₹299 (Labour)</td><td></td></tr>
+    
+                    <!-- Side-by-Side Door - Cooling Issue -->
+                    <tr><td rowspan="9">Side-by-Side Door - Cooling Issue</td><td>AC Fan Motor</td><td>₹1200</td></tr>
+                    <tr><td>Damper Thermostat</td><td>₹1050</td></tr>
+                    <tr><td>Fan blade</td><td>₹120</td></tr>
+                    <tr><td>Room Sensor</td><td>₹600</td></tr>
+                    <tr><td>Rotary Switch</td><td>₹850</td></tr>
+                    <tr><td>Thermocol duct repair</td><td>₹500</td></tr>
+                    <tr><td>Thermostat</td><td>₹850</td></tr>
+                    <tr><td>DC Fan Motor - Freezer</td><td>₹1900</td></tr>
+                    <tr><td>DC Fan Motor - Refrigerator</td><td>₹1900</td></tr>
+                    <tr><td>DC Fan Motor - Condenser</td><td>₹1900</td></tr>
+                    <tr><td>Door/Gasket adjust</td><td>₹200</td></tr>
+                    <tr><td>Damaged door - Repair</td><td>₹901</td></tr>
+    
+                    <!-- Side-by-Side Door - Gas Charge -->
+                    <tr><td rowspan="7">Side-by-Side Door - Gas Charge</td><td>Capillary</td><td>₹350</td></tr>
+                    <tr><td>Condensor coil</td><td>₹1400</td></tr>
+                    <tr><td>Dryer (Freezer)</td><td>₹170</td></tr>
+                    <tr><td>Pin valve</td><td>₹90</td></tr>
+                    <tr><td>Cooling Coil (Side By Side)</td><td>₹2900</td></tr>
+                    <tr><td>Refrigerant Gas Charge (SBS)</td><td>₹2300</td></tr>
+                    <tr><td>Sub Condensor</td><td>₹800</td></tr>
+                    <tr><td>Drain Tray Condenser</td><td>₹500</td></tr>
+                    <tr><td>Step Valve</td><td>₹1200</td></tr>
+    
+                    <!-- Side-by-Side Door - Compressor Unit -->
+                    <tr><td rowspan="5">Side-by-Side Door - Compressor Unit</td><td>Capacitor</td><td>₹150</td></tr>
+                    <tr><td>Inverter Compressor</td><td>₹7500</td></tr>
+                    <tr><td>Over Load Protector (OLP)</td><td>₹350</td></tr>
+                    <tr><td>Relay</td><td>₹400</td></tr>
+                    <tr><td>Relay + OLP + Capacitor</td><td>₹900</td></tr>
+                    <tr><td>Compressor (Side By Side) including Relay, OLP and Capacitor</td><td>₹6600</td></tr>
+    
+                    <!-- Side-by-Side Door - Defrost Issue -->
+                    <tr><td rowspan="8">Side-by-Side Door - Defrost Issue</td><td>Thermal Fuse</td><td>₹200</td></tr>
+                    <tr><td>Thermal Fuse and Bimetal both</td><td>₹700</td></tr>
+                    <tr><td>Defrost Sensor</td><td>₹600</td></tr>
+                    <tr><td>Glass Heater</td><td>₹900</td></tr>
+                    <tr><td>P Cord heater</td><td>₹1000</td></tr>
+                    <tr><td>Defrost Sensor with Thermal fuse</td><td>₹700</td></tr>
+                    <tr><td>Heater Coil</td><td>₹1650</td></tr>
+                    <tr><td>Rod Heater</td><td>₹1000</td></tr>
+                    <tr><td>Drain and Duct cleaning</td><td>₹300</td></tr>
+                    <tr><td>Defrost Timer</td><td>₹1000</td></tr>
+    
+                    <!-- Side-by-Side Door - ICE/Water dispenser -->
+                    <tr><td rowspan="9">Side-by-Side Door - ICE/Water Dispenser</td><td>Ice maker kit</td><td>₹2500</td></tr>
+                    <tr><td>Cube Solenoid Valve</td><td>₹1200</td></tr>
+                    <tr><td>Auger motor</td><td>₹1500</td></tr>
+                    <tr><td>Ice / Water lever switch</td><td>₹250</td></tr>
+                    <tr><td>Ice /Water solenoid valve</td><td>₹1200</td></tr>
+                    <tr><td>Ice Storage box</td><td>₹0</td></tr>
+                    <tr><td>Replace ice Blade or flap</td><td>₹1</td></tr>
+                    <tr><td>Ice tray</td><td>₹550</td></tr>
+                    <tr><td>Water / Ice dispenser lever</td><td>₹1200</td></tr>
+                    <tr><td>Water Filter</td><td>₹2000</td></tr>
+                    <tr><td>Water pipe/connector 3 meter</td><td>₹350</td></tr>
+                    <tr><td>Water tank with Pipe</td><td>₹1400</td></tr>
+    
+                    <!-- Side-by-Side Door - Accessories -->
+                    <tr><td rowspan="10">Side-by-Side Door - Accessories</td><td>Bulb</td><td>₹50</td></tr>
+                    <tr><td>Copper pipe insulation</td><td>₹170</td></tr>
+                    <tr><td>Door switch</td><td>₹250</td></tr>
+                    <tr><td>Drain Pipe</td><td>₹100</td></tr>
+                    <tr><td>Drain tray</td><td>₹400</td></tr>
+                    <tr><td>LED Light</td><td>₹290</td></tr>
+                    <tr><td>Magnetic door switch</td><td>₹200</td></tr>
+                    <tr><td>Bulb Holder</td><td>₹100</td></tr>
+                    <tr><td>Temperature Knob</td><td>₹50</td></tr>
+                    <tr><td>Door Leg</td><td>₹50</td></tr>
+                    <tr><td>Door Switch</td><td>₹290</td></tr>
+    
+                    <!-- Side-by-Side Door - Minor Repair -->
+                    <tr><td rowspan="10">Side-by-Side Door - Minor Repair</td><td>Defrost cycle adjustment</td><td>₹0</td></tr>
+                    <tr><td>Door-gap fix</td><td>₹0</td></tr>
+                    <tr><td>Electrical contact fixing</td><td>₹0</td></tr>
+                    <tr><td>Pipe and fan blade adjustment</td><td>₹0</td></tr>
+                    <tr><td>Refrigerator levelling</td><td>₹0</td></tr>
+                    <tr><td>Electrical Plug Adjustment</td><td>₹0</td></tr>
+                    <tr><td>Refrigerator location correction</td><td>₹0</td></tr>
+                    <tr><td>Temperature setting</td><td>₹0</td></tr>
+                    <tr><td>Wire Retaping</td><td>₹0</td></tr>
+                    <tr><td>Tray/Shelf Adjustment</td><td>₹0</td></tr>
+                    <tr><td>Drain Tray Adjustment</td><td>₹0</td></tr>
+                    <tr><td>Minor Repair - Others</td><td>₹0</td></tr>
+                    <tr><td>₹299 (Labour)</td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    
+    <div class="footer">
+        <div class="social-media">
+            <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i
+                    class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i
+                    class="fab fa-facebook-f"></i></a>
+        </div>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </div>
+
+    <script src="HCare.js"></script>
+</body>
+
+</html>

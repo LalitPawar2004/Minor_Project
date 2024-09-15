@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washing machine</title>
+    <link rel="stylesheet" href="HCare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="hero-section.html">
+                <img src="/photos/logo.png-removebg-preview.png" alt="Logo">
+            </a>
+        </div>
+        <h3>Expertise At Your Doorstep!</h3>
+        <a href="confirmation.html" class="cart-icon"><span id="item-count" class="item-count">0</span>
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+    </nav>
+
+
+    <main>
+        <div class="services">
+            <h3 style="text-align: center;">Repair & Service</h3>
+            <hr>
+            <br>
+            <div class="visit" style="display: flex; justify-content: space-between; align-items: center;">
+                <img src="/photos/W1.jpg" alt="Repairing">
+                <h4>Front Load</h4>
+                <h3>Just 99rs <br><br><br> <span><button class="add-button" onclick="selectProduct('Washing Machine', 'Repair & Service', 99)">Book</button></span> </h3>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="visit" style="display: flex; justify-content: space-between; align-items: center;">
+                <img src="/photos/W2.jpg" alt="Repairing">
+                <h4>Top Load</h4>
+                <h3>Just 99rs <br><br><br> <span><button class="add-button" onclick="selectProduct('Top Load', 'Repair & Service', 99)">Book</button></span> </h3>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="visit" style="display: flex; justify-content: space-between; align-items: center;">
+                <img src="/photos/W3.jpg" alt="Repairing">
+                <h4>Semi-Automatic</h4>
+                <h3>Service Fee : Just 99rs <br><br><br> <span><button class="add-button" onclick="selectProduct('Semiautomatic', 'Repair & Service', 99)">Book</button></span> </h3>
+            </div>
+            <h4>How It Works :</h4>
+            <ul>
+                <li>
+                    <strong>Washing Machine Checkup:</strong> The professional visits your home to diagnose the problem.
+                    Final cost provided post-diagnosis.
+                </li>
+                <li>
+                    <strong>Adjustment of Inspection Fee:</strong> If you decide to go ahead with the repair, the
+                    inspection fee will be adjusted in the final bill.
+                </li>
+                <li>
+                    <strong>Fixed Rate Spare Parts:</strong> High-quality spare parts are procured and used for repair.
+                </li>
+                <li>
+                    <strong>Standardised Repair Process:</strong> The trained professional handles and works on the
+                    appliance with utmost care.
+                </li>
+            </ul>
+        </div>
+
+        <div class="services" id="order-summary">
+            <h3 style="text-align: center;">Installation</h3>
+            <hr>
+            <br>
+            <div class="visit" style="display: flex; justify-content: space-between;">
+                <img src="/photos/W4.jpg" alt="Installation">
+                <h3>Installation Fee : Just 249rs <br><br><br> <button class="add-button" onclick="selectProduct('Washing Machine', 'Installation', 249)">Book</button></h3>
+            </div>
+        </div>
+
+        <div class="services">
+            <h3 style="text-align: center;">Uninstallation</h3>
+            <hr>
+            <br>
+            <div class="visit" style="display: flex; justify-content: space-between;">
+                <img src="/photos/W5.jpg" alt="Uninstallation">
+                <h3>Uninstallation Fee : Just 249rs <br><br><br> <button class="add-button" onclick="selectProduct('Washing Machine', 'Uninstallation', 249)">Book</button></h3>
+            </div>
+        </div>
+
+        <div class="services">
+                <h3 style="text-align: center;">Rate Card</h3>
+                <hr>
+                <br>
+                <h2>Semi Automatic WM - Power Unit</h2>
+                <table>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                    <tr>
+                        <td>Power 3 Pin Plug Top</td>
+                        <td>₹200</td>
+                    </tr>
+                    <tr>
+                        <td>Power Cord</td>
+                        <td>₹500</td>
+                    </tr>
+                    <tr>
+                        <td>Re wiring (Heavy damage)</td>
+                        <td>₹650</td>
+                    </tr>
+                </table>
+
+                <h2>Semi Automatic WM - Wash Issue</h2>
+                <table>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                    <tr>
+                        <td>Timer Wash (Electro Mechanical)</td>
+                        <td>₹1050</td>
+                    </tr>
+                    <tr>
+                        <td>Pulsator Snap</td>
+                        <td>₹300</td>
+                    </tr>
+                    <tr>
+                        <td>Thermostat</td>
+                        <td>₹400</td>
+                    </tr>
+                    <tr>
+                        <td>Pulsator with snap</td>
+                        <td>₹850</td>
+                    </tr>
+                    <tr>
+                        <td>Gear Box (With Pulley)</td>
+                        <td>₹1550</td>
+                    </tr>
+                    <tr>
+                        <td>Heater</td>
+                        <td>₹950</td>
+                    </tr>
+                    <tr>
+                        <td>Motor Pulley</td>
+                        <td>₹600</td>
+                    </tr>
+                    <tr>
+                        <td>Spin & Wash Capacitor</td>
+                        <td>₹550</td>
+                    </tr>
+                    <tr>
+                        <td>Wash Motor</td>
+                        <td>₹1868</td>
+                    </tr>
+                    <tr>
+                        <td>Wash Timer</td>
+                        <td>₹750</td>
+                    </tr>
+                    <tr>
+                        <td>V Belt</td>
+                        <td>₹450</td>
+                    </tr>
+                </table>
+
+                <h2>Semi Automatic WM - Spin Issue</h2>
+                <table>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                    <tr>
+                        <td>Spin Lid</td>
+                        <td>₹850</td>
+                    </tr>
+                    <tr>
+                        <td>Spin Lid Switch</td>
+                        <td>₹350</td>
+                    </tr>
+                    <tr>
+                        <td>Spin Tub</td>
+                        <td>₹900</td>
+                    </tr>
+                    <tr>
+                        <td>Spin tub bellow</td>
+                        <td>₹552</td>
+                    </tr>
+                    <tr>
+                        <td>Timer Spin</td>
+                        <td>₹781</td>
+                    </tr>
+                    <tr>
+                        <td>Assembly Shocker 3 Qty</td>
+                        <td>₹600</td>
+                    </tr>
+                    <tr>
+                        <td>Spin Motor</td>
+                        <td>₹1999</td>
+                    </tr>
+                    <tr>
+                        <td>Coupler / Brake Wheel</td>
+                        <td>₹400</td>
+                    </tr>
+                    <tr>
+                        <td>Coupler Bush</td>
+                        <td>₹150</td>
+                    </tr>
+                    <tr>
+                        <td>Brake Shoe</td>
+                        <td>₹200</td>
+                    </tr>
+                    <tr>
+                        <td>Brake Plate</td>
+                        <td>₹350</td>
+                    </tr>
+                    <tr>
+                        <td>Lid Spring</td>
+                        <td>₹150</td>
+                    </tr>
+                    <tr>
+                        <td>Brake Wire</td>
+                        <td>₹200</td>
+                    </tr>
+                </table>
+
+                <h2>Semi Automatic WM - Water Leakage</h2>
+                <table>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                    <tr>
+                        <td>Drain Bellow</td>
+                        <td>₹250</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Valve Assembly</td>
+                        <td>₹500</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Valve Spring</td>
+                        <td>₹50</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Case Cleaning</td>
+                        <td>₹300</td>
+                    </tr>
+                </table>
+
+                <h2>Semi Automatic WM - Accessories</h2>
+                <table>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                    <tr>
+                        <td>Panel Top Cover</td>
+                        <td>₹1100</td>
+                    </tr>
+                    <tr>
+                        <td>Descaling Powder</td>
+                        <td>₹150</td>
+                    </tr>
+                    <tr>
+                        <td>Rat Mesh</td>
+                        <td>₹400</td>
+                    </tr>
+                    <tr>
+                        <td>Wash Lid</td>
+                        <td>₹950</td>
+                    </tr>
+                    <tr>
+                        <td>Back Cover</td>
+                        <td>₹650</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Strip</td>
+                        <td>₹100</td>
+                    </tr>
+                    <tr>
+                        <td>Over Flow Pipe</td>
+                        <td>₹220</td>
+                    </tr>
+                    <tr>
+                        <td>Spin Cap</td>
+                        <td>₹200</td>
+                    </tr>
+                    <tr>
+                        <td>Outer Body / Cabinet</td>
+                        <td>₹2600</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Selector</td>
+                        <td>₹150</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Pipe</td>
+                        <td>₹300</td>
+                    </tr>
+                    <tr>
+                        <td>Lint / Magic filter</td>
+                        <td>₹350</td>
+                    </tr>
+                    <tr>
+                        <td>Knob</td>
+                        <td>₹159</td>
+                    </tr>
+                    <tr>
+                        <td>Inlet Pipe</td>
+                        <td>₹200</td>
+                    </tr>
+                    <tr>
+                        <td>Washing Machine Cover</td>
+                        <td>₹600</td>
+                    </tr>
+                </table>
+
+                <h2>Top Load WM - Power Unit</h2>
+                <table>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                    <tr>
+                        <td>Repair - Inverter PCB (Top Load)</td>
+                        <td>₹2201</td>
+                    </tr>
+                    <tr>
+                        <td>Power 3 Pin Plug Top</td>
+                        <td>₹200</td>
+                    </tr>
+                    <tr>
+                        <td>Power Cord</td>
+                        <td>₹500</td>
+                    </tr>
+                    <tr>
+                        <td>Wiring Kit</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>Replace (New) - Display PCB (Top Load)</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Replace (New) - PCB (Top Load)</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>LVT</td>
+                        <td>₹800</td>
+                    </tr>
+                    <tr>
+                        <td>Repair - PCB (Top Load)</td>
+                        <td>₹1677</td>
+                    </tr>
+                </table>
+
+                <h2>Top Load WM - Wash Issue</h2>
+                <table>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                    <tr>
+                        <td>Capacitor</td>
+                        <td>₹450</td>
+                    </tr>
+                    <tr>
+                        <td>Motor Pulley</td>
+                        <td>₹350</td>
+                    </tr>
+                    <tr>
+                        <td>Pulsator Snap</td>
+                        <td>₹342</td>
+                    </tr>
+                    <tr>
+                        <td>Pressure sensor with pipe</td>
+                        <td>₹950</td>
+                    </tr>
+                    <tr>
+                        <td>Agitator</td>
+                        <td>₹850</td>
+                    </tr>
+                    <tr>
+                        <td>Outer tub</td>
+                        <td>₹2200</td>
+                    </tr>
+                    <tr>
+                        <td>Pulsator with snap</td>
+                        <td>₹1059</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor Pipe</td>
+                        <td>₹281</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Cleaning</td>
+                        <td>₹300</td>
+                    </tr>
+                    <tr>
+                        <td>Door Lock (Top Load)</td>
+                        <td>₹1450</td>
+                    </tr>
+                    <tr>
+                        <td>Brake Arm - (Whirlpool)</td>
+                        <td>₹1200</td>
+                    </tr>
+                    <tr>
+                        <td>AC Inlet Valve 1 way</td>
+                        <td>₹750</td>
+                    </tr>
+                    <tr>
+                        <td>AC Inlet Valve 2 way</td>
+                        <td>₹970</td>
+                    </tr>
+                    <tr>
+                        <td>AC Inlet valve 3/4 way</td>
+                        <td>₹1400</td>
+                    </tr>
+                    <tr>
+                        <td>DC Inlet Valve 1 way</td>
+                        <td>₹999</td>
+                    </tr>
+                    <tr>
+                        <td>DC Inlet Valve 2 way</td>
+                        <td>₹1300</td>
+                    </tr>
+                    <tr>
+                        <td>DC Inlet valve 3/4 way</td>
+                        <td>₹2000</td>
+                    </tr>
+            </div>
+            </table>
+            <h2>Front Load WM - Power Unit</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Power 3 Pin Plug Top</td>
+                        <td>₹250</td>
+                    </tr>
+                    <tr>
+                        <td>Power Cord</td>
+                        <td>₹500</td>
+                    </tr>
+                    <tr>
+                        <td>Replace (New) - Display PCB (Front Load)</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Replace (New) - PCB (Front Load)</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>LVT</td>
+                        <td>₹800</td>
+                    </tr>
+                    <tr>
+                        <td>Repair - PCB (Front Load)</td>
+                        <td>₹3200</td>
+                    </tr>
+                    <tr>
+                        <td>Timer</td>
+                        <td>₹2300</td>
+                    </tr>
+                    <tr>
+                        <td>Motor Control Unit (MCU)</td>
+                        <td>₹1450</td>
+                    </tr>
+                    <tr>
+                        <td>Repair - Inverter PCB (Front Load)</td>
+                        <td>₹3597</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Front Load WM - Wash Issue</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DC Inlet Valve 3/4 Way</td>
+                        <td>₹2000</td>
+                    </tr>
+                    <tr>
+                        <td>Door Lock (Front Load)</td>
+                        <td>₹1450</td>
+                    </tr>
+                    <tr>
+                        <td>Complete Drum Assembly (Bosch/Siemens)</td>
+                        <td>₹9000</td>
+                    </tr>
+                    <tr>
+                        <td>AC Inlet Valve 3/4 Way</td>
+                        <td>₹1250</td>
+                    </tr>
+                    <tr>
+                        <td>DC Inlet Valve 3/4 Way</td>
+                        <td>₹2000</td>
+                    </tr>
+                    <tr>
+                        <td>Gasket/ Door Diaphragm</td>
+                        <td>₹1600</td>
+                    </tr>
+                    <tr>
+                        <td>Complete Tub & Drum Assembly</td>
+                        <td>₹6000</td>
+                    </tr>
+                    <tr>
+                        <td>Front Tub</td>
+                        <td>₹2300</td>
+                    </tr>
+                    <tr>
+                        <td>Back Tub (With Bearings and Seal)</td>
+                        <td>₹3300</td>
+                    </tr>
+                    <tr>
+                        <td>Capacitor</td>
+                        <td>₹350</td>
+                    </tr>
+                    <tr>
+                        <td>Pulley Drive</td>
+                        <td>₹750</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor Pipe</td>
+                        <td>₹250</td>
+                    </tr>
+                    <tr>
+                        <td>AC Inlet Valve 1 Way</td>
+                        <td>₹750</td>
+                    </tr>
+                    <tr>
+                        <td>AC Inlet Valve 2 Way</td>
+                        <td>₹970</td>
+                    </tr>
+                    <tr>
+                        <td>Pressure Sensor with Pipe</td>
+                        <td>₹973</td>
+                    </tr>
+                    <tr>
+                        <td>DC Inlet Valve 1 Way</td>
+                        <td>₹999</td>
+                    </tr>
+                    <tr>
+                        <td>DC Inlet Valve 2 Way</td>
+                        <td>₹1300</td>
+                    </tr>
+                    <tr>
+                        <td>Hall Sensor</td>
+                        <td>₹1050</td>
+                    </tr>
+                    <tr>
+                        <td>Direct Drive Motor</td>
+                        <td>₹4000</td>
+                    </tr>
+                    <tr>
+                        <td>Heater</td>
+                        <td>₹900</td>
+                    </tr>
+                    <tr>
+                        <td>Heater Sensor</td>
+                        <td>₹500</td>
+                    </tr>
+                    <tr>
+                        <td>Motor Universal</td>
+                        <td>₹3300</td>
+                    </tr>
+                    <tr>
+                        <td>V Belt</td>
+                        <td>₹850</td>
+                    </tr>
+                    <tr>
+                        <td>Drum Pulley</td>
+                        <td>₹500</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Front Load WM - Noise Issue</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Shocker Set - 3 Pieces</td>
+                        <td>₹2400</td>
+                    </tr>
+                    <tr>
+                        <td>Flange Shaft Triangle</td>
+                        <td>₹2800</td>
+                    </tr>
+                    <tr>
+                        <td>Drum Bearing/Oil Seal with Cleaning</td>
+                        <td>₹2700</td>
+                    </tr>
+                    <tr>
+                        <td>Shocker Set - 2 Pieces</td>
+                        <td>₹1600</td>
+                    </tr>
+                    <tr>
+                        <td>Shocker Set - 3 Pieces</td>
+                        <td>₹2400</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Front Load WM - Spin Issue</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Drain Pump Motor</td>
+                        <td>₹1350</td>
+                    </tr>
+                    <tr>
+                        <td>Assembly Drain Pump</td>
+                        <td>₹1600</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Pump Motor (Double Way)</td>
+                        <td>₹2200</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Front Load WM - Water Leakage</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Drain Cleaning</td>
+                        <td>₹300</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Rubber Hose</td>
+                        <td>₹700</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Front Load WM - Accessories</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chemical Wash - Drum Dismantling & Assembling</td>
+                        <td>₹1200</td>
+                    </tr>
+                    <tr>
+                        <td>Frontload Trolley (Stand)</td>
+                        <td>₹1300</td>
+                    </tr>
+                    <tr>
+                        <td>Rat Mesh</td>
+                        <td>₹400</td>
+                    </tr>
+                    <tr>
+                        <td>Door Hinge</td>
+                        <td>₹1100</td>
+                    </tr>
+                    <tr>
+                        <td>Descaling Powder</td>
+                        <td>₹169</td>
+                    </tr>
+                    <tr>
+                        <td>Outer Body / Cabinet</td>
+                        <td>₹3500</td>
+                    </tr>
+                    <tr>
+                        <td>Dispenser Angle</td>
+                        <td>₹450</td>
+                    </tr>
+                    <tr>
+                        <td>Water Filter (Front Load)</td>
+                        <td>₹1</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Extension Inlet Pipe 4Mtr (with Adaptor)</td>
+                        <td>₹750</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Rubber Hose</td>
+                        <td>₹700</td>
+                    </tr>
+                    <tr>
+                        <td>Drain Pipe</td>
+                        <td>₹300</td>
+                    </tr>
+                    <tr>
+                        <td>Inlet Pipe / 1.5 Mtr with Adaptor</td>
+                        <td>₹650</td>
+                    </tr>
+                    <tr>
+                        <td>Knob</td>
+                        <td>₹150</td>
+                    </tr>
+                    <tr>
+                        <td>Noise Filter</td>
+                        <td>₹550</td>
+                    </tr>
+                    <tr>
+                        <td>Inlay Panel / Control Panel</td>
+                        <td>₹850</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor Pipe</td>
+                        <td>₹250</td>
+                    </tr>
+                    <tr>
+                        <td>Tap Adaptor</td>
+                        <td>₹559</td>
+                    </tr>
+                    <tr>
+                        <td>Power 3 Pin Plug Top</td>
+                        <td>₹250</td>
+                    </tr>
+                    <tr>
+                        <td>Back Tub (With Bearings and Seal)</td>
+                        <td>₹3300</td>
+                    </tr>
+                    <tr>
+                        <td>Tub/Drain/Detergent-Drawer Hose Rubber Pipe</td>
+                        <td>₹550</td>
+                    </tr>
+                    <tr>
+                        <td>Power Cord</td>
+                        <td>₹500</td>
+                    </tr>
+                    <tr>
+                        <td>Gasket/ Door Diaphragm</td>
+                        <td>₹1600</td>
+                    </tr>
+                    <tr>
+                        <td>Gasket Spring</td>
+                        <td>₹250</td>
+                    </tr>
+                    <tr>
+                        <td>Front Holder/ Door Lever</td>
+                        <td>₹850</td>
+                    </tr>
+                    <tr>
+                        <td>Back Holder</td>
+                        <td>₹750</td>
+                    </tr>
+                    <tr>
+                        <td>Washing Machine Cover</td>
+                        <td>₹800</td>
+                    </tr>
+                    <tr>
+                        <td>Pulley Drive</td>
+                        <td>₹750</td>
+                    </tr>
+                    <tr>
+                        <td>Outer Tub</td>
+                        <td>₹2600</td>
+                    </tr>
+                    <tr>
+                        <td>Door Assembly</td>
+                        <td>₹1800</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Minor Repair</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Detergent Drawer Adjustment</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Electrical Plug Adjustment</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Drain Pipe Adjustment</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Filter Cleaning</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Tap Adapter Fixing</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Wire Retaping</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Machine Level Adjustment</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Cloth/Coin Stuck</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Belt Adjustment</td>
+                        <td>₹0</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Body Cabinet Adjustment</td>
+                        <td>₹299</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Installation</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Installation/Un-installation</td>
+                        <td>₹100</td>
+                    </tr>
+                    <tr>
+                        <td>₹299 (Labour)</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Descaling</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Service Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Descaling</td>
+                        <td>₹200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <div class="footer">
+        <div class="social-media">
+            <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i
+                    class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i
+                    class="fab fa-facebook-f"></i></a>
+        </div>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </div>
+
+    <script src="HCare.js"></script>
+</body>
+
+</html>
