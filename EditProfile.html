@@ -8,10 +8,73 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
-        body {
-            background-color: white;
-        }
-        /* Remove blue background and border on focus for input fields and textarea */
+         body {
+        background-color: white; /* Keep the main background white for a clean look */
+        color: black; /* Text color remains neutral */
+    }
+
+    /* Header Section */
+    h1 {
+        color: #ff9900; /* Match navbar color */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        color: #333; /* Neutral label color for readability */
+    }
+
+    /* Form Fields */
+    .form-control {
+        background-color: white;
+        color: black;
+        border: 1px solid #ff9900; /* Add a slight orange border for form fields */
+    }
+
+    .form-control:focus {
+        border-color: #ff9900; /* Keep the orange border when focused */
+        box-shadow: 0 0 5px rgba(255, 153, 0, 0.5); /* Soft orange shadow on focus */
+    }
+
+    /* Buttons */
+    .btn-primary {
+        background-color: #ff9900; /* Orange background for Save Changes button */
+        color: white;
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background-color: #e68a00; /* Slightly darker orange on hover */
+    }
+
+    .btn-secondary {
+        background-color: #fff;
+        color: #ff9900; /* Orange text for Cancel button */
+        border: 1px solid #ff9900;
+    }
+
+    .btn-secondary:hover {
+        background-color: #ff9900; /* Orange background on hover */
+        color: white;
+    }
+
+    /* Sign In / Sign Up Links */
+    .btn-link {
+        color: #ff9900; /* Orange links */
+    }
+
+    .btn-link:hover {
+        color: #e68a00; /* Darker orange on hover */
+    }
+
+    /* Container for the form */
+    .container {
+        background-color: #f9f9f9; /* Light gray container background */
+        padding: 20px;
+        border-radius: 8px; /* Rounded corners for a smooth look */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a finishing touch */
+    }
+
         input:focus,
         textarea:focus {
             outline: none !important;
@@ -71,7 +134,35 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS and dependencies
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+        const usernameInput = document.getElementById('username');
+    const userNameDisplay = document.querySelector('.user-info h2'); // Make sure this references the username display in the navbar or profile
+
+    usernameInput.addEventListener('input', function() {
+        userNameDisplay.textContent = usernameInput.value;
+    });
+    </script>-->
+    <script>
+        // Get the current username from local storage or set default
+        let currentUsername = localStorage.getItem("username") || "Your Name";
+
+        // Update the navbar username display
+        function updateNavbarUsername() {
+            document.getElementById("navbarUsername").textContent = currentUsername;
+        }
+
+        // Save changes function
+        document.getElementById("saveButton").addEventListener("click", function() {
+            const newUsername = document.getElementById("username").value;
+            currentUsername = newUsername || "Your Name"; // Update the current username
+            localStorage.setItem("username", currentUsername); // Store the username in local storage
+            updateNavbarUsername(); // Update the navbar
+            alert("Profile updated successfully!"); // Optional: notify the user
+        });
+
+        // Initialize the username display
+        document.getElementById("username").value = currentUsername;
+    </script>
 </body>
 </html>
