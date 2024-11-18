@@ -8,72 +8,75 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
-         body {
-        background-color: white; /* Keep the main background white for a clean look */
-        color: black; /* Text color remains neutral */
-    }
+        body {
+            background-color: white; /* Keep the main background white for a clean look */
+            color: black; /* Text color remains neutral */
+        }
+        
+        .navbar-brand{
+            color: #ff9900;
+        }
+        /* Header Section */
+        h1 {
+            color: #ff9900; /* Match navbar color */
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    /* Header Section */
-    h1 {
-        color: #ff9900; /* Match navbar color */
-        text-align: center;
-        margin-bottom: 20px;
-    }
+        .form-label {
+            color: #333; /* Neutral label color for readability */
+        }
 
-    .form-label {
-        color: #333; /* Neutral label color for readability */
-    }
+        /* Form Fields */
+        .form-control {
+            background-color: white;
+            color: black;
+            border: 1px solid #ff9900; /* Add a slight orange border for form fields */
+        }
 
-    /* Form Fields */
-    .form-control {
-        background-color: white;
-        color: black;
-        border: 1px solid #ff9900; /* Add a slight orange border for form fields */
-    }
+        .form-control:focus {
+            border-color: #ff9900; /* Keep the orange border when focused */
+            box-shadow: 0 0 5px rgba(255, 153, 0, 0.5); /* Soft orange shadow on focus */
+        }
 
-    .form-control:focus {
-        border-color: #ff9900; /* Keep the orange border when focused */
-        box-shadow: 0 0 5px rgba(255, 153, 0, 0.5); /* Soft orange shadow on focus */
-    }
+        /* Buttons */
+        .btn-primary {
+            background-color: #ff9900; /* Orange background for Save Changes button */
+            color: white;
+            border: none;
+        }
 
-    /* Buttons */
-    .btn-primary {
-        background-color: #ff9900; /* Orange background for Save Changes button */
-        color: white;
-        border: none;
-    }
+        .btn-primary:hover {
+            background-color: #e68a00; /* Slightly darker orange on hover */
+        }
 
-    .btn-primary:hover {
-        background-color: #e68a00; /* Slightly darker orange on hover */
-    }
+        .btn-secondary {
+            background-color: #fff;
+            color: #ff9900; /* Orange text for Cancel button */
+            border: 1px solid #ff9900;
+        }
 
-    .btn-secondary {
-        background-color: #fff;
-        color: #ff9900; /* Orange text for Cancel button */
-        border: 1px solid #ff9900;
-    }
+        .btn-secondary:hover {
+            background-color: #ff9900; /* Orange background on hover */
+            color: white;
+        }
 
-    .btn-secondary:hover {
-        background-color: #ff9900; /* Orange background on hover */
-        color: white;
-    }
+        /* Sign In / Sign Up Links */
+        .btn-link {
+            color: #ff9900; /* Orange links */
+        }
 
-    /* Sign In / Sign Up Links */
-    .btn-link {
-        color: #ff9900; /* Orange links */
-    }
+        .btn-link:hover {
+            color: #e68a00; /* Darker orange on hover */
+        }
 
-    .btn-link:hover {
-        color: #e68a00; /* Darker orange on hover */
-    }
-
-    /* Container for the form */
-    .container {
-        background-color: #f9f9f9; /* Light gray container background */
-        padding: 20px;
-        border-radius: 8px; /* Rounded corners for a smooth look */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a finishing touch */
-    }
+        /* Container for the form */
+        .container {
+            background-color: #f9f9f9; /* Light gray container background */
+            padding: 20px;
+            border-radius: 8px; /* Rounded corners for a smooth look */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a finishing touch */
+        }
 
         input:focus,
         textarea:focus {
@@ -93,76 +96,112 @@
     </style>
 </head>
 <body>
+    <!-- Navbar with Username Display -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            User Profile
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="userProfileDropdown">
+                            <li><span class="dropdown-item" id="navbarUsername">Your Name</span></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="signin.html">Sign In</a></li>
+                            <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container mt-4">
         <h1>Edit Profile</h1>
-        <form>
-            <!-- Name Field -->
+        <form id="editProfileForm">
+            <!-- Username Field -->
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" value="Your Name">
+                <input type="text" class="form-control" id="username">
             </div>
 
             <!-- Email Address Field -->
             <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" value="youremail@example.com">
+                <input type="email" class="form-control" id="email">
             </div>
 
             <!-- Phone Number Field -->
             <div class="mb-3">
                 <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" value="+91 1234567890">
+                <input type="tel" class="form-control" id="phone">
             </div>
 
             <!-- Address Field -->
             <div class="mb-3">
                 <label for="address" class="form-label">Address</label>
-                <textarea class="form-control" id="address" rows="3">Your Address</textarea>
+                <textarea class="form-control" id="address" rows="3"></textarea>
             </div>
 
             <!-- Save and Cancel Buttons -->
             <div class="d-flex justify-content-between">
-                <button type="submit" class="btn btn-primary">Save Changes</button>
+                <button type="button" class="btn btn-primary" id="saveButton">Save Changes</button>
                 <button type="button" class="btn btn-secondary">Cancel</button>
             </div>
         </form>
         <hr>
         <!-- Sign In and Sign Up Options -->
         <div class="mt-3 d-flex justify-content-between">
-            <p>Already have an account? <a href="login_page.html" class="btn btn-link">Sign In</a></p>
+            <p>Already have an account? <a href="signin.html" class="btn btn-link">Sign In</a></p>
             <p>Don't have an account? <a href="signup.html" class="btn btn-link">Sign Up</a></p>
         </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
-        const usernameInput = document.getElementById('username');
-    const userNameDisplay = document.querySelector('.user-info h2'); // Make sure this references the username display in the navbar or profile
-
-    usernameInput.addEventListener('input', function() {
-        userNameDisplay.textContent = usernameInput.value;
-    });
-    </script>-->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Get the current username from local storage or set default
+        // Get the current username and other details from local storage or set default
         let currentUsername = localStorage.getItem("username") || "Your Name";
+        let currentEmail = localStorage.getItem("email") || "youremail@example.com";
+        let currentPhone = localStorage.getItem("phone") || "+91 1234567890";
+        let currentAddress = localStorage.getItem("address") || "Your Address";
 
-        // Update the navbar username display
+        // Initialize the form fields with current values
+        document.getElementById("username").value = currentUsername;
+        document.getElementById("email").value = currentEmail;
+        document.getElementById("phone").value = currentPhone;
+        document.getElementById("address").value = currentAddress;
+
+        // Function to update the navbar username display
         function updateNavbarUsername() {
             document.getElementById("navbarUsername").textContent = currentUsername;
         }
 
         // Save changes function
         document.getElementById("saveButton").addEventListener("click", function() {
-            const newUsername = document.getElementById("username").value;
-            currentUsername = newUsername || "Your Name"; // Update the current username
-            localStorage.setItem("username", currentUsername); // Store the username in local storage
-            updateNavbarUsername(); // Update the navbar
-            alert("Profile updated successfully!"); // Optional: notify the user
+            currentUsername = document.getElementById("username").value;
+            currentEmail = document.getElementById("email").value;
+            currentPhone = document.getElementById("phone").value;
+            currentAddress = document.getElementById("address").value;
+
+            // Store the details in local storage
+            localStorage.setItem("username", currentUsername);
+            localStorage.setItem("email", currentEmail);
+            localStorage.setItem("phone", currentPhone);
+            localStorage.setItem("address", currentAddress);
+
+            updateNavbarUsername(); // Update the navbar username display
+            alert("Profile updated successfully!"); // Notify the user
         });
 
-        // Initialize the username display
-        document.getElementById("username").value = currentUsername;
+        // Initialize the username display in navbar
+        updateNavbarUsername();
     </script>
 </body>
 </html>

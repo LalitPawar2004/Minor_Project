@@ -17,242 +17,363 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  <div class="hero">
-    <nav>
-        <img src="/Minor_Project/photos/LogoNew.jpeg" class="logo">
-        <div class="nav-search">
-            <input placeholder="Search Services" class="search-input"> 
-            <div class="search-icon">
-                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-            </div>
-        </div>
-        
-       <img src="/Minor_Project/photos/user.png" class="user-pic" onclick="toggleMenu()">
+  
+    <div class="hero">
+        <nav>
+                    <img src="/Minor_Project/photos/LogoNew.jpeg" class="logo">
+                    <div class="nav-search">
+                        <input placeholder="Search Services" class="search-input" id="serviceSearch" oninput="filterServices()"> 
+                        <div class="search-icon">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div id="suggestions" class="suggestions"></div>
 
-        <div class="sub-menu-wrap" id="subMenu">
-            <div class="sub-menu">
-                <div class="user-info">
-                    <img src="/Minor_Project/photos/user.png">
-                    <h2>User  Name</h2>
+                    
+                    <img src="/Minor_Project/photos/user.png" class="user-pic" onclick="toggleMenu()">
+                
+                    <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            
+                            <a href="EditProfile.html" class="sub-menu-link" onclick="editProfile()">
+                                <img src="/Minor_Project/photos/profile.png">
+                                <p>Edit Profile</p>
+                                <span>></span>
+                            </a>
+
+                    <a href="YourOrders.html" class="sub-menu-link">
+                        <img src="/Minor_Project/photos/YourOrder.png">
+                        <p>Your Orders</p>
+                        <span>></span>
+                    </a>
+
+                    <a href="help-support.html" class="sub-menu-link">
+                        <img src="/Minor_Project/photos/help.png">
+                        <p>Help Center</p>
+                        <span>></span>
+                    </a>
+                    
+                    <a href="Referral-and-earn.html" class="sub-menu-link">
+                        <img src="/Minor_Project/photos/pngegg.png">
+                        <p>Referral & Earn</p>
+                        <span>></span>
+                    </a>
+                    
+                    <a href="#" class="sub-menu-link">
+                        <img src="/Minor_Project/photos/logout.png">
+                        <p>Logout</p>
+                        <span>></span>
+                    </a>
                 </div>
-                <hr>
-                <a href="/Minor_Project/EditProfile.html" class="sub-menu-link">
-                    <img src="/Minor_Project/photos/profile.png">
-                    <p>Edit Profile</p>
-                    <span>></span>
-                </a>
-
-                <a href="YourOrders.html" class="sub-menu-link">
-                    <img src="/Minor_Project/photos/YourOrder.png">
-                    <p>Your Orders</p>
-                    <span>></span>
-                </a>
-
-                <a href="help-support.html" class="sub-menu-link">
-                    <img src="/Minor_Project/photos/help.png">
-                    <p>Help Center</p>
-                    <span>></span>
-                </a>
-                
-                <a href="Referral-and-earn.html" class="sub-menu-link">
-                    <img src="/Minor_Project/photos/pngegg.png">
-                    <p>Referral & Earn</p>
-                    <span>></span>
-                </a>
-                
-                <a href="#" class="sub-menu-link">
-                    <img src="/Minor_Project/photos/logout.png">
-                    <p>Logout</p>
-                    <span>></span>
-                </a>
             </div>
-        </div>
-    </nav>
-</div>
+        </nav>
+    </div>
 
-<script>
-let subMenu = document.getElementById("subMenu");
+ <script>
+    let subMenu = document.getElementById("subMenu");
 
-function toggleMenu(){
-    subMenu.classList.toggle("open-menu")
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu")
+    }
+    
+    let currentUsername = "Your Name"; // Default username
+
+function updateUsernameDisplay() {
+    const username = document.getElementById("username").value;
+    currentUsername = username || "Your Name"; // Update the current username
+    document.getElementById("navbarUsername").textContent = currentUsername; // Update navbar
 }
-</script>   
-</body>    
 
+function editProfile() {
+    document.getElementById("username").value = currentUsername; // Pre-fill username
+    updateUsernameDisplay(); // Update the navbar with the current username
+    toggleMenu(); // Close the dropdown menu if needed
+}
+    
+ </script>   
+   
+   
 <style>
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .hero {
-height: 60px;
-min-width: 100%;
-background-color: #ff9900;
-display: flex;
-align-items: center;
+    height: 60px;
+    min-width: 100%;
+    background-color: #ff9900;
+    display: flex;
+    align-items: center;
 }
 
 nav {
-width: 100%;
-padding: 10px 10%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-position: relative;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
 .logo {
-height: 50px;
-width: 50px;
-border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 .nav-search {
-display: flex;
-justify-content: space-evenly;
-background-color: white;
-width: 720px;
-height: 40px;
-border-radius: 5px;
-border: none;
-cursor: pointer;
+    position: relative; /* To make .suggestions align with this container */
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    width: 720px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
 .search-input {
-width: 100%;
-font-size: 1rem;
-padding-left: 5px;
-border: none;
-border-top-left-radius: 4px;
-border-bottom-left-radius: 4px;
-cursor: pointer;
-text-align: left;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 5px;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
+    text-align: left;
 }
 
 .search-icon {
-width: 45px;
-display: flex;
-justify-content: center;
-color: #111;
-align-items: center;
-font-size: 1.2rem;
-background-color: white;
-border-top-right-radius: 4px;
-border-bottom-right-radius:4px;
-cursor: pointer;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    color: #111;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: white;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius:4px;
+    cursor: pointer;
 }
 
 .nav-search:hover {
-border: none;
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .user-pic {
-width: 40px;
-border-radius: 50%;
-cursor: pointer;
-margin-left: 30px; 
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px; 
 }
 
 .sub-menu-wrap {
-position: absolute;
-top: 100%;
-right: 10%;
-width: 320px;
-max-height: 0px;
-overflow: hidden;
-transition: max-height 0.5s;
-cursor: pointer;
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    cursor: pointer;
+    z-index: 100;
 }
 
 .sub-menu-wrap.open-menu {
-max-height: 460px; 
+    max-height: 460px; 
 }
 .sub-menu {
-background: wheat;
-padding: 20px;
-margin: 10px;
-cursor: pointer;
-border-radius: 4px;
-border-top-left-radius: 4px;
-border-bottom-left-radius: 4px;
-border-top-right-radius: 4px;
-border-bottom-right-radius:4px;
+    background: wheat;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius:4px;
 }
 
 .user-info {
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-cursor: pointer;
-margin-bottom: 15px;
-font-weight: 500;
-font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .user-info h2 {
-margin-left: 7px;
+    margin-left: 7px;
 }
 
 .user-info img {
-width: 60px;
-border-radius: 50%;
+    width: 60px;
+    border-radius: 50%;
 }
 
 .sub-menu hr {
-border: 0;
-height: 1px;
-width: 100%;
-background: black;
-margin: 15px 0 10px;
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: black;
+    margin: 15px 0 10px;
 }
 
 .sub-menu-link {
-display: flex;
-align-items: center;
-justify-content: space-between;
-text-decoration: none;
-color: #525252;
-margin: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
 }
 
 .sub-menu-link p {
-width: 100%;
+    width: 100%;
 }
 
 .sub-menu-link help {
-display: flex;
-align-items: center;
-justify-content: space-between;
-text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
 } 
 
 
 .sub-menu-link img {
-width: 40px;
-background: #e5e5e5;
-border-radius: 50%;
-padding: 8px;
-margin-right: 15px;
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
 }
 
 .sub-menu-link span {
-font-size: 22px;
-transition: transform 0.5s;
+    font-size: 22px;
+    transition: transform 0.5s;
 }
 
 .sub-menu-link:hover span {
-transform: translateX(5px);
+    transform: translateX(5px);
 }
 
 .sub-menu-link:hover p {
-font-weight: 600;
+    font-weight: 600;
 }
+
+
+.suggestions {
+    position: absolute;
+    top: 100%; /* Align directly below the search bar */
+    left: 49.5%; /* Move the left edge to the center */
+    transform: translateX(-50%); /* Shift the suggestions left by half its width to center it */
+    width: 90%; /* Optional: make suggestions responsive, adjust as needed */
+    max-width: 720px; /* Match the maximum width of the search bar */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    left: 390px;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
 </style>
+
+<script>
+    // Toggle menu visibility
+    function toggleMenu() {
+        document.getElementById("subMenu").classList.toggle("open-menu");
+    }
+
+    // Service suggestions data
+    const services = [
+        "Plumber",
+        "Carpenter",
+        "Electrician",
+        "TV Repairing",
+        "AC Repairing",
+        "Refrigerator Repairing",
+        "Water Purifier Repairing",
+        "Laptop Repairing",
+        "Home Cleaning",
+        "Kitchen Cleaning",
+        "Toilet & Bathroom Cleaning",
+        "Washing Machine",
+    ];
+
+    // Service page mapping for redirection
+    const servicePages = {
+        "Plumber": "/Minor_Project/Services/plumber.html",
+        "Carpenter": "/Minor_Project/Services/Carpeneter.html",
+        "Electrician": "/Minor_Project/Services/Electrician.html",
+        "TV Repairing": "/Minor_Project/Services/television.html",
+        "AC Repairing": "/Minor_Project/Services/AC.html",
+        "Refrigerator Repairing": "/Minor_Project/Services/Refrigerator.html",
+        "Water Purifier Repairing": "/Minor_Project/Services/Water_Purifier.html",
+        "Laptop Repairing": "/Minor_Project/Services/laptop.html",
+        "Home Cleaning": "/Minor_Project/Services/Home-Cleaning.html",
+        "Kitchen Cleaning": "/Minor_Project/Services/kitchen.html",
+        "Toilet & Bathroom Cleaning": "/Minor_Project/Services/Toilet&Bathroom.html",
+        "Washing Machine": "/Minor_Project/Services/washing_machine.html",
+    };
+
+    // Filter services based on input
+    function filterServices() {
+        const input = document.getElementById("serviceSearch").value.toLowerCase();
+        const suggestions = document.getElementById("suggestions");
+        suggestions.innerHTML = ""; // Clear previous suggestions
+
+        if (input) {
+            const filteredServices = services.filter(service => service.toLowerCase().includes(input));
+            filteredServices.forEach(service => {
+                const suggestionItem = document.createElement("div");
+                suggestionItem.classList.add("suggestion-item");
+                suggestionItem.textContent = service;
+                suggestionItem.onclick = () => selectService(service);
+                suggestions.appendChild(suggestionItem);
+            });
+        }
+    }
+
+    // Handle service selection and redirect to the corresponding page
+    function selectService(service) {
+        document.getElementById("serviceSearch").value = service;
+        document.getElementById("suggestions").innerHTML = ""; // Clear suggestions
+
+        // Redirect to the specific service page
+        if (servicePages[service]) {
+            window.location.href = servicePages[service];
+        } else {
+            alert("Page for selected service not available.");
+        }
+    }
+
+    // Hide suggestions when clicking outside
+    document.addEventListener('click', function(event) {
+        const suggestions = document.getElementById("suggestions");
+        if (!suggestions.contains(event.target)) {
+            suggestions.innerHTML = ""; // Clear suggestions
+        }
+    });
+</script>
+
 
 <!-- Main Content -->
 
