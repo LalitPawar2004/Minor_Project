@@ -1,143 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Town Care</title>
-    <!-- Bootstrap CSS -->
+    <title>Town Care - Edit Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <style>
         body {
-            background-color: white; /* Keep the main background white for a clean look */
-            color: black; /* Text color remains neutral */
+            background-color: white;
+            color: black;
         }
-        
-        .navbar-brand{
+
+        .navbar-brand {
             color: #ff9900;
         }
-        /* Header Section */
+
         h1 {
-            color: #ff9900; /* Match navbar color */
+            color: #ff9900;
             text-align: center;
             margin-bottom: 20px;
         }
 
-        .form-label {
-            color: #333; /* Neutral label color for readability */
-        }
-
-        /* Form Fields */
         .form-control {
             background-color: white;
             color: black;
-            border: 1px solid #ff9900; /* Add a slight orange border for form fields */
-        }
-
-        .form-control:focus {
-            border-color: #ff9900; /* Keep the orange border when focused */
-            box-shadow: 0 0 5px rgba(255, 153, 0, 0.5); /* Soft orange shadow on focus */
-        }
-
-        /* Buttons */
-        .btn-primary {
-            background-color: #ff9900; /* Orange background for Save Changes button */
-            color: white;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: #e68a00; /* Slightly darker orange on hover */
-        }
-
-        .btn-secondary {
-            background-color: #fff;
-            color: #ff9900; /* Orange text for Cancel button */
             border: 1px solid #ff9900;
         }
 
-        .btn-secondary:hover {
-            background-color: #ff9900; /* Orange background on hover */
+        .btn-primary {
+            background-color: #ff9900;
             color: white;
         }
 
-        /* Sign In / Sign Up Links */
-        .btn-link {
-            color: #ff9900; /* Orange links */
+        .btn-secondary {
+            background-color: white;
+            color: #ff9900;
+            border: 1px solid #ff9900;
         }
 
-        .btn-link:hover {
-            color: #e68a00; /* Darker orange on hover */
-        }
-
-        /* Container for the form */
         .container {
-            background-color: #f9f9f9; /* Light gray container background */
+            background-color: #f9f9f9;
             padding: 20px;
-            border-radius: 8px; /* Rounded corners for a smooth look */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for a finishing touch */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        input:focus,
-        textarea:focus {
-            outline: none !important;
-            box-shadow: none !important;
-            background-color: white !important; /* Ensure background stays white */
-            border: 1px solid black !important; /* Optional: Keeps a black border to indicate focus */
+        /* Profile Picture */
+        #profilePicPreview img,
+        #navbarProfileImage {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
         }
 
-        /* Ensure consistent style across inputs */
-        input,
-        textarea {
-            background-color: white; /* Default background */
-            border: 1px solid black; /* Default border */
-            color: black; /* Text color */
+        #navbarProfileImage {
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
+
 <body>
-    <!-- Navbar with Username Display -->
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Home Care</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="userProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            User Profile
+                        <a>
+                            <label for="userprofile" class="">User Profile</label>
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="userProfileDropdown">
-                            <li><span class="dropdown-item" id="navbarUsername">Your Name</span></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="signin.html">Sign In</a></li>
-                            <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Edit Profile Form -->
     <div class="container mt-4">
-        <h1>Edit Profile</h1>
         <form id="editProfileForm">
+
             <!-- Username Field -->
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control" id="username">
             </div>
 
-            <!-- Email Address Field -->
+            <!-- Email Field -->
             <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
                 <input type="email" class="form-control" id="email">
             </div>
 
-            <!-- Phone Number Field -->
+            <!-- Phone Field -->
             <div class="mb-3">
                 <label for="phone" class="form-label">Phone Number</label>
                 <input type="tel" class="form-control" id="phone">
@@ -149,59 +110,54 @@
                 <textarea class="form-control" id="address" rows="3"></textarea>
             </div>
 
-            <!-- Save and Cancel Buttons -->
-            <div class="d-flex justify-content-between">
-                <button type="button" class="btn btn-primary" id="saveButton">Save Changes</button>
-                <button type="button" class="btn btn-secondary">Cancel</button>
-            </div>
+           
         </form>
-        <hr>
-        <!-- Sign In and Sign Up Options -->
-        <div class="mt-3 d-flex justify-content-between">
-            <p>Already have an account? <a href="signin.html" class="btn btn-link">Sign In</a></p>
-            <p>Don't have an account? <a href="signup.html" class="btn btn-link">Sign Up</a></p>
-        </div>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Get the current username and other details from local storage or set default
-        let currentUsername = localStorage.getItem("username") || "Your Name";
-        let currentEmail = localStorage.getItem("email") || "youremail@example.com";
-        let currentPhone = localStorage.getItem("phone") || "+91 1234567890";
-        let currentAddress = localStorage.getItem("address") || "Your Address";
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve profile data from localStorage or use defaults
+            let username = localStorage.getItem("username") || "Your Name";
+            let email = localStorage.getItem("email") || "youremail@example.com";
+            let phone = localStorage.getItem("phone") || "+91 1234567890";
+            let address = localStorage.getItem("address") || "Your Address";
 
-        // Initialize the form fields with current values
-        document.getElementById("username").value = currentUsername;
-        document.getElementById("email").value = currentEmail;
-        document.getElementById("phone").value = currentPhone;
-        document.getElementById("address").value = currentAddress;
+            // Set profile data
+            document.getElementById("username").value = username;
+            document.getElementById("email").value = email;
+            document.getElementById("phone").value = phone;
+            document.getElementById("address").value = address;
 
-        // Function to update the navbar username display
-        function updateNavbarUsername() {
-            document.getElementById("navbarUsername").textContent = currentUsername;
-        }
+            // Save Profile Data
+            document.getElementById("saveButton").addEventListener("click", function () {
+                let newUsername = document.getElementById("username").value;
+                let newEmail = document.getElementById("email").value;
+                let newPhone = document.getElementById("phone").value;
+                let newAddress = document.getElementById("address").value;
 
-        // Save changes function
-        document.getElementById("saveButton").addEventListener("click", function() {
-            currentUsername = document.getElementById("username").value;
-            currentEmail = document.getElementById("email").value;
-            currentPhone = document.getElementById("phone").value;
-            currentAddress = document.getElementById("address").value;
+                // Save the new profile data to localStorage
+                localStorage.setItem("username", newUsername);
+                localStorage.setItem("email", newEmail);
+                localStorage.setItem("phone", newPhone);
+                localStorage.setItem("address", newAddress);
 
-            // Store the details in local storage
-            localStorage.setItem("username", currentUsername);
-            localStorage.setItem("email", currentEmail);
-            localStorage.setItem("phone", currentPhone);
-            localStorage.setItem("address", currentAddress);
+                // Update navbar username
+                document.getElementById("navbarUsername").textContent = newUsername;
 
-            updateNavbarUsername(); // Update the navbar username display
-            alert("Profile updated successfully!"); // Notify the user
+                // Update dropdown username
+    document.getElementById("navbarUsernameDropdown").textContent = newUsername;
+
+                // Notify the user that the profile was updated
+                alert("Profile updated successfully!");
+            });
         });
-
-        // Initialize the username display in navbar
-        updateNavbarUsername();
     </script>
 </body>
+
 </html>
+
+
+
+
+
