@@ -109,6 +109,33 @@
 
         // Initialize
         displaySelectedProducts();
+
+
+
+    function clearCart() {
+    let selectedProducts = JSON.parse(localStorage.getItem('selectedProducts')) || [];
+    let orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+
+    if (selectedProducts.length > 0) {
+        const orderData = {
+            products: selectedProducts,
+            totalPrice: selectedProducts.reduce((acc, product) => acc + product.price, 0),
+            date: new Date().toLocaleString()
+        };
+
+        // Add new order to orderHistory
+        orderHistory.push(orderData);
+        localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
+
+        // Clear cart after confirmation
+        localStorage.removeItem('selectedProducts');
+        alert('Order Confirmed! 🎉');
+        window.location.href = 'your_orders.html'; // Redirect to 'Your Orders'
+    } else {
+        alert('No products in the cart! 🛒');
+    }
+}
+
     </script>
 
     </script>
