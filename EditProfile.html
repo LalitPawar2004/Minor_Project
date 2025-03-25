@@ -1,108 +1,163 @@
-<!-- EditProfile.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile</title>
+    <title>Home Care - User Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .profile-container {
             background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
+            color: black;
         }
-        h2 {
+
+        .navbar-brand {
+            color: #ff9900;
+        }
+
+        h1 {
+            color: #ff9900;
+            text-align: center;
             margin-bottom: 20px;
         }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+
+        .form-control {
+            background-color: white;
+            color: black;
+            border: 1px solid #ff9900;
         }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
+
+        .btn-primary {
+            background-color: #ff9900;
             color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
         }
-        button:hover {
-            background-color: #45a049;
+
+        .btn-secondary {
+            background-color: white;
+            color: #ff9900;
+            border: 1px solid #ff9900;
         }
-        a {
-            text-decoration: none;
-            color: #007BFF;
-            margin-top: 10px;
-            display: inline-block;
+
+        .container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile Picture */
+        #profilePicPreview img,
+        #navbarProfileImage {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        #navbarProfileImage {
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
+
 <body>
 
-    <div class="profile-container">
-        <h2>Edit Profile</h2>
-        <input type="text" id="editUsername" placeholder="Username" required>
-        <input type="email" id="editEmail" placeholder="Email" required>
-        <input type="password" id="editPassword" placeholder="Password">
-        <button onclick="updateProfile()">Update Profile</button>
-        <a href="index.html">Logout</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home Care</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a>
+                            <label for="userprofile" class="">User Profile</label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Edit Profile Form -->
+    <div class="container mt-4">
+        <form id="editProfileForm">
+
+            <!-- Username Field -->
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username">
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+
+            <!-- Phone Field -->
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone">
+            </div>
+
+            <!-- Address Field -->
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" rows="3"></textarea>
+            </div>
+
+           
+        </form>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Get logged-in user data
-        const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve profile data from localStorage or use defaults
+            let username = localStorage.getItem("username") || "Your Name";
+            let email = localStorage.getItem("email") || "youremail@example.com";
+            let phone = localStorage.getItem("phone") || "+91 1234567890";
+            let address = localStorage.getItem("address") || "Your Address";
 
-        // Check if user is logged in
-        if (loggedInUser) {
-            document.getElementById('editUsername').value = loggedInUser.username;
-            document.getElementById('editEmail').value = loggedInUser.email;
-        } else {
-            alert('No user logged in!');
-            window.location.href = 'index.html';
-        }
+            // Set profile data
+            document.getElementById("username").value = username;
+            document.getElementById("email").value = email;
+            document.getElementById("phone").value = phone;
+            document.getElementById("address").value = address;
 
-        // Update Profile Function
-        function updateProfile() {
-            const newUsername = document.getElementById('editUsername').value;
-            const newEmail = document.getElementById('editEmail').value;
-            const newPassword = document.getElementById('editPassword').value;
+            // Save Profile Data
+            document.getElementById("saveButton").addEventListener("click", function () {
+                let newUsername = document.getElementById("username").value;
+                let newEmail = document.getElementById("email").value;
+                let newPhone = document.getElementById("phone").value;
+                let newAddress = document.getElementById("address").value;
 
-            let users = JSON.parse(localStorage.getItem('users')) || [];
+                // Save the new profile data to localStorage
+                localStorage.setItem("username", newUsername);
+                localStorage.setItem("email", newEmail);
+                localStorage.setItem("phone", newPhone);
+                localStorage.setItem("address", newAddress);
 
-            // Find and update the user in localStorage
-            const userIndex = users.findIndex(user => user.username === loggedInUser.username);
-            if (userIndex !== -1) {
-                users[userIndex].username = newUsername;
-                users[userIndex].email = newEmail;
-                if (newPassword) {
-                    users[userIndex].password = newPassword;
-                }
-                // Save updated user data to localStorage
-                localStorage.setItem('users', JSON.stringify(users));
+                // Update navbar username
+                document.getElementById("navbarUsername").textContent = newUsername;
 
-                // Update session storage as well
-                sessionStorage.setItem('loggedInUser', JSON.stringify(users[userIndex]));
-                alert('Profile updated successfully!');
-            } else {
-                alert('Error updating profile!');
-            }
-        }
+                // Update dropdown username
+    document.getElementById("navbarUsernameDropdown").textContent = newUsername;
+
+                // Notify the user that the profile was updated
+                alert("Profile updated successfully!");
+            });
+        });
     </script>
 </body>
+
 </html>
+
+
+
+
+
