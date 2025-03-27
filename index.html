@@ -98,7 +98,6 @@ p {
 
     <script>
         // app.js
-
 // Mock user data (this would usually be stored on a backend)
 let users = JSON.parse(localStorage.getItem('users')) || [];
 
@@ -128,11 +127,21 @@ function login() {
     const username = document.getElementById('loginUsername').value;
     const password = document.getElementById('loginPassword').value;
 
+    // Basic input validation
+    if (!username || !password) {
+        alert('Please enter both username and password.');
+        return;
+    }
+
     const user = users.find(user => user.username === username && user.password === password);
 
     if (user) {
         alert('Login successful!');
         
+        // Clear the fields
+        document.getElementById('loginUsername').value = '';
+        document.getElementById('loginPassword').value = '';
+
         // Redirect to home-page.html after successful login
         window.location.href = 'home-page.html';  // This will redirect to the home page
     } else {
@@ -145,6 +154,12 @@ function register() {
     const username = document.getElementById('registerUsername').value;
     const password = document.getElementById('registerPassword').value;
 
+    // Basic input validation
+    if (!username || !password) {
+        alert('Please fill out both fields.');
+        return;
+    }
+
     // Check if user already exists
     const userExists = users.some(user => user.username === username);
     if (userExists) {
@@ -153,7 +168,13 @@ function register() {
         // Add the user to the mock database (localStorage)
         users.push({ username, password });
         localStorage.setItem('users', JSON.stringify(users));
+
         alert('Registration successful!');
+
+        // Clear the form
+        document.getElementById('registerUsername').value = '';
+        document.getElementById('registerPassword').value = '';
+
         showLogin(); // Go back to login after successful registration
     }
 }
@@ -162,6 +183,11 @@ function register() {
 function forgotPassword() {
     const username = document.getElementById('forgotUsername').value;
 
+    if (!username) {
+        alert('Please enter your username.');
+        return;
+    }
+
     const user = users.find(user => user.username === username);
     if (user) {
         alert(`Password reset link sent to ${username}`);
@@ -169,6 +195,7 @@ function forgotPassword() {
         alert('User not found!');
     }
 }
+
 
     </script>
 </body>
