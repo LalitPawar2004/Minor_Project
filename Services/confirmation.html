@@ -147,6 +147,18 @@
         .join("\n");
       const date = new Date().toLocaleString();
 
+      // ✅ Save order in orderHistory (NEW)
+      const newOrder = {
+      products: selectedProducts,
+      totalPrice: totalPrice,
+      date: date
+      };
+
+       let orderHistory = JSON.parse(localStorage.getItem("orderHistory")) || [];
+       orderHistory.push(newOrder);
+       localStorage.setItem("orderHistory", JSON.stringify(orderHistory));
+
+
       // Set hidden inputs
       document.getElementById("selected_services").value = serviceDetails;
       document.getElementById("total_price_hidden").value = totalPrice;
